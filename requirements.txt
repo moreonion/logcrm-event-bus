@@ -4,10 +4,26 @@
 #
 #    pip-compile --output-file requirements.txt requirements.in
 #
+-e git+https://github.com/moreonion/moflask.git@614602c801fe53d616e7fb14cfbcc98ec3ad31cf#egg=moflask
 amqp==2.3.2               # via kombu
 billiard==3.5.0.4         # via celery
+blinker==1.4              # via raven
 celery[redis]==4.2.0
+certifi==2018.4.16        # via requests
+chardet==3.0.4            # via requests
+click==6.7                # via flask
+flask==1.0.2              # via raven
+idna==2.7                 # via requests
+itsdangerous==0.24        # via flask
+jinja2==2.10              # via flask
 kombu==4.2.1              # via celery
+markupsafe==1.0           # via jinja2
+mohawk==0.3.4
 pytz==2018.5              # via celery
+raven[flask]==6.9.0
 redis==2.10.6             # via celery
+requests==2.19.1
+six==1.11.0               # via mohawk
+urllib3==1.23             # via requests
 vine==1.1.4               # via amqp
+werkzeug==0.14.1          # via flask
