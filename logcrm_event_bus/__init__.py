@@ -6,6 +6,8 @@ import logging
 from celery import Celery, Task
 from moflask.flask import BaseApp
 from mohawk import Sender
+from raven.contrib.flask import Sentry
+import raven.contrib.celery as raven_celery
 import requests
 
 
@@ -32,6 +34,15 @@ class App(BaseApp):
             key.setdefault('algorithm', 'sha256')
             task = LogcrmSendTask(name, key)
             celery.tasks.register(task)
+
+    def init_sentry(self):
+        """Set up sentry as error and logging handler.
+
+        Use of sentry is enforced for this app.
+        """
+        self.sentry = Sentry(self)
+        raven_celery.register_logger_signal(self.sentry.client)
+        raven_celery.register_signal(self.sentry.client)
 
 
 class LogcrmSendTask(Task):
