@@ -3,7 +3,7 @@ source = logcrm_event_bus
 omit = logcrm_event_bus/tests/*
 
 [report]
-fail_under = 95
+fail_under = 85
 
 [html]
 directory = coverage-html

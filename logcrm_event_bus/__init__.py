@@ -16,7 +16,7 @@ class App(BaseApp):
 
     def __init__(self, *args, **kwargs):
         """Initialize the Flask App object."""
-        super().__init__(*args, **kwargs)
+        super().__init__('logcrm_event_bus', *args, **kwargs)
         self.celery = self.init_celery()
 
     def init_celery(self):
