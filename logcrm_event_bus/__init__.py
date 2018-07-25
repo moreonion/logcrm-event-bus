@@ -14,6 +14,8 @@ import requests
 class App(BaseApp):
     """Flask app object used for configuration management and commands."""
 
+    sentry = None
+
     def __init__(self, *args, **kwargs):
         """Initialize the Flask App object."""
         super().__init__('logcrm_event_bus', *args, **kwargs)
@@ -36,13 +38,11 @@ class App(BaseApp):
             celery.tasks.register(task)
 
     def init_sentry(self):
-        """Set up sentry as error and logging handler.
-
-        Use of sentry is enforced for this app.
-        """
-        self.sentry = Sentry(self)
-        raven_celery.register_logger_signal(self.sentry.client)
-        raven_celery.register_signal(self.sentry.client)
+        """Set up sentry as error and logging handler."""
+        super().init_sentry()
+        if self.sentry:
+            raven_celery.register_logger_signal(self.sentry.client)
+            raven_celery.register_signal(self.sentry.client)
 
 
 class LogcrmSendTask(Task):
