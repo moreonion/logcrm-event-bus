@@ -24,7 +24,7 @@ bootstrap: $(VENV)
 	@echo '******************************************************************************'
 
 test:
-	$(IN_VENV) pytest --cov tests logcrm_event_bus/tests
+	$(IN_VENV) pytest --cov tests
 
 safety:
 	$(IN_VENV) safety check -r requirements-dev.txt
