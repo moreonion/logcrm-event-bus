@@ -22,7 +22,7 @@ mohawk==0.3.4
 pytz==2018.5              # via celery
 raven[flask]==6.9.0
 redis==2.10.6             # via celery
-requests==2.19.1
+requests==2.21.0
 six==1.11.0               # via mohawk
 urllib3==1.23             # via requests
 vine==1.1.4               # via amqp

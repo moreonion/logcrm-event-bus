@@ -50,4 +50,4 @@ requirements.txt: requirements.in
 requirements-dev.txt: requirements.in requirements-dev.in
 	@test -d $(VENV) || $(VENV_COMMAND) $(VENV)
 	$(IN_VENV) pip install pip-tools
-	$(IN_VENV) pip-compile --rebuild requirements.in requirements-dev.in --output-file $@ > /dev/null
+	$(IN_VENV) pip-compile --rebuild requirements-dev.in --output-file $@ > /dev/null
