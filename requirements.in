@@ -1,4 +1,4 @@
--e git+https://github.com/moreonion/moflask.git@614602c801fe53d616e7fb14cfbcc98ec3ad31cf#egg=moflask
+moflask
 celery[redis]
 mohawk
 raven[flask]
