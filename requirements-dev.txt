@@ -33,17 +33,17 @@ coverage==5.1
     # via pytest-cov
 distlib==0.3.0
     # via virtualenv
-dparse==0.5.1
+dparse==0.5.2
     # via safety
 filelock==3.0.12
     # via virtualenv
-flask-konch==2.0.0
-    # via -r requirements-dev.in
 flask==1.1.2
     # via
     #   flask-konch
     #   moflask
     #   raven
+flask-konch==2.0.0
+    # via -r requirements-dev.in
 identify==1.4.15
     # via pre-commit
 idna==2.9
@@ -93,18 +93,16 @@ pylint==2.5.2
     # via -r requirements-dev.in
 pyparsing==2.4.7
     # via packaging
-pytest-cov==2.8.1
-    # via -r requirements-dev.in
 pytest==5.4.1
     # via
     #   -r requirements-dev.in
     #   pytest-cov
+pytest-cov==2.8.1
+    # via -r requirements-dev.in
 pytz==2020.1
     # via celery
 pyyaml==5.3.1
-    # via
-    #   dparse
-    #   pre-commit
+    # via pre-commit
 raven[flask]==6.10.0
     # via -r requirements.in
 redis==3.5.0
