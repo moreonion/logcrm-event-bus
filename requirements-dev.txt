@@ -18,7 +18,7 @@ blinker==1.4
     # via raven
 celery[redis]==4.4.2
     # via -r requirements.in
-certifi==2020.4.5.1
+certifi==2022.12.7
     # via requests
 cfgv==3.1.0
     # via pre-commit
@@ -37,13 +37,13 @@ dparse==0.5.1
     # via safety
 filelock==3.0.12
     # via virtualenv
-flask-konch==2.0.0
-    # via -r requirements-dev.in
 flask==1.1.2
     # via
     #   flask-konch
     #   moflask
     #   raven
+flask-konch==2.0.0
+    # via -r requirements-dev.in
 identify==1.4.15
     # via pre-commit
 idna==2.9
@@ -93,12 +93,12 @@ pylint==2.5.2
     # via -r requirements-dev.in
 pyparsing==2.4.7
     # via packaging
-pytest-cov==2.8.1
-    # via -r requirements-dev.in
 pytest==5.4.1
     # via
     #   -r requirements-dev.in
     #   pytest-cov
+pytest-cov==2.8.1
+    # via -r requirements-dev.in
 pytz==2020.1
     # via celery
 pyyaml==5.3.1
